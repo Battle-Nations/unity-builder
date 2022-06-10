@@ -48,13 +48,14 @@ class Docker {
     const { workspace, actionFolder, unitySerial, gitPrivateToken } = parameters;
 
     return `docker run \
-            --workdir /github/workspace \
+            --workdir c:/github/workspace \
             --rm \
             ${ImageEnvironmentFactory.getEnvVarString(parameters)} \
             --env UNITY_SERIAL="${unitySerial}" \
             --env GITHUB_WORKSPACE=c:/github/workspace \
             ${gitPrivateToken ? `--env GIT_PRIVATE_TOKEN="${gitPrivateToken}"` : ''} \
-            --volume "${workspace}":"c:/github/workspace" \
+            --env ORIGINAL_WORKSPACE="${workspace}" \
+            --volume "c:/build_workspace":"c:/github/workspace" \
             --volume "c:/regkeys":"c:/regkeys" \
             --volume "C:/Program Files (x86)/Microsoft Visual Studio":"C:/Program Files (x86)/Microsoft Visual Studio" \
             --volume "C:/Program Files (x86)/Windows Kits":"C:/Program Files (x86)/Windows Kits" \
