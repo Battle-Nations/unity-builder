@@ -9,7 +9,7 @@ mkdir -p "$ACTIVATE_LICENSE_PATH"
 
 pwd
 ls -lashi
-pushd ~/Unity/Hub/Editor/2021.3.4f1/Editor/Data
+pushd /opt/Unity
 pwd
 ls -lashi
 sudo mv bee_backend bee_backend_real
