@@ -12,7 +12,7 @@ ls -lashi
 pushd /opt/unity/Editor/Data
 pwd
 ls -lashi
-sudo mv bee_backend bee_backend_real
+mv bee_backend bee_backend_real
 cp /steps/bee_backend bee_backend
 chmod +x bee_backend
 ls -lashi
