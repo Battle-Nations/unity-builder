@@ -9,7 +9,7 @@ mkdir -p "$ACTIVATE_LICENSE_PATH"
 
 pwd
 ls -lashi
-pushd /opt/Unity
+pushd /opt/unity/Editor/Data
 pwd
 ls -lashi
 sudo mv bee_backend bee_backend_real
