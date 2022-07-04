@@ -7,11 +7,18 @@
 ACTIVATE_LICENSE_PATH="$GITHUB_WORKSPACE/_activate-license~"
 mkdir -p "$ACTIVATE_LICENSE_PATH"
 
+pwd
+ls -lashi
 pushd ~/Unity/Hub/Editor/2021.3.4f1/Editor/Data
+pwd
+ls -lashi
 sudo mv bee_backend bee_backend_real
 cp /steps/bee_backend bee_backend
 chmod +x bee_backend
+ls -lashi
 popd
+pwd
+ls -lashi
 
 #
 # Run steps
